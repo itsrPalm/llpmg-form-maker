@@ -11,7 +11,7 @@
 			"name": "Next.js: debug client-side",
 			"type": "chrome",
 			"request": "launch",
-			"url": "https://llpmg-form-maker.clinicviews.com"
+			"url": "http://localhost:3000"
 			// "webRoot": "${workspaceFolder}"
 		},
 		{

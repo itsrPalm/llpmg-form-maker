@@ -1,0 +1,78 @@
+{
+  "Items": [
+    {
+      "Name": "overview",
+      "Title": "Overview"
+    },
+    {
+      "Name": "get-started",
+      "Title": "Get Started",
+      "Items": [
+        {
+          "Name": "get-started-angular",
+          "Title": "Angular"
+        },
+        {
+          "Name": "get-started-vue",
+          "Title": "Vue"
+        },
+        {
+          "Name": "get-started-react",
+          "Title": "React"
+        },
+        {
+          "Name": "get-started-knockout-jquery",
+          "Title": "Knockout / jQuery"
+        }
+      ]
+    },
+    {
+      "Name": "set-up-table-view",
+      "Title": "Table View for Survey Results",
+      "Items": [
+        {
+          "Name": "set-up-table-view-angular",
+          "Title": "Angular"
+        },
+        {
+          "Name": "set-up-table-view-vue",
+          "Title": "Vue"
+        },
+        {
+          "Name": "set-up-table-view-react",
+          "Title": "React"
+        },
+        {
+          "Name": "set-up-table-view-knockout-jquery",
+          "Title": "Knockout / jQuery"
+        }
+      ]
+    },
+    {
+      "Name": "api",
+      "Title": "Dashboard API",
+      "Items": [
+        {
+          "Name": "visualizationpanel",
+          "Title": "VisualizationPanel"
+        },
+        {
+          "Name": "IVisualizationPanelOptions",
+          "Title": "IVisualizationPanelOptions"
+        },
+        {
+          "Name": "visualizerbase",
+          "Title": "VisualizerBase"
+        },
+        {
+          "Name": "visualizationmanager",
+          "Title": "VisualizationManager"
+        },
+        {
+          "Name": "visualizerfactory",
+          "Title": "VisualizerFactory"
+        }
+      ]
+    }
+  ]
+}

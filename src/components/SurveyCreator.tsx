@@ -137,15 +137,16 @@ import { json as defaultJson } from "../../data/survey_json";
 // import "@/defaultV2.css";
 
 // import { ICreatorOptions } from "../../surveyjs-core/survey-creator_dev/packages/survey-creator/src/creator-base";
+
 // import { SurveyCreator } from "../../surveyjs-core/survey-creator_dev/packages/survey-creator/src/editor";
 // import { SurveyCreatorComponent } from "../../surveyjs-core/survey-creator_dev/packages/survey-creator-react/src/SurveyCreator";
 
 // import { ICreatorOptions } from "../../surveyjs-core/survey-creator/packages/survey-creator/src/creator-base";
 // import { SurveyCreatorComponent } from "../../surveyjs-core/survey-creator/packages/survey-creator-react/build/typings/SurveyCreator";
 // import {
-// 	SurveyCreator,
-// 	SurveyCreatorComponent,
-// } from "../../surveyjs-core/survey-creator/packages/survey-creator-react/src/SurveyCreator";
+//     SurveyCreator,
+//     SurveyCreatorComponent,
+// } from "../../surveyjs-core/survey-creator_dev/packages/survey-creator-react/src/SurveyCreator";
 
 const defaultCreatorOptions: ICreatorOptions = {
 	showLogicTab: true,

@@ -99,9 +99,9 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import "survey-analytics/survey.analytics.tabulator.css";
 import { Model } from "survey-core";
-// import { Model } from "../../surveyjs-core/survey-library_dev/build/survey-core/survey.core.js";
 import "tabulator-tables/dist/css/tabulator.min.css";
 import { data, json } from "../../data/dashboard_data-0";
+// import { Model } from "../../surveyjs-core/survey-library_dev/build/survey-core/survey.core";
 // import "../../survey-core/survey-analytics_dev/src/tables/tabulator.scss";
 
 const DashboardTabulator = () => {

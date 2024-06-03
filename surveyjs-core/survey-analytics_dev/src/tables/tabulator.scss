@@ -1,0 +1,208 @@
+$main-color: var(--main-color, #1ab394);
+$background-color: #ffffff;
+
+$text-gray: #a0a0a0;
+$background-gray: #9b9b9b;
+$border-color: #d4d4d4;
+$scroll-color: #e2e2e2;
+$svg-color: var(--svg-color, rgba(#9f9f9f, 0.4));
+$svg-hover-color: var(--svg-hover-color, #9f9f9f);
+$dark-gray: #9b9b9b;
+$background-gray: #f7f7f7;
+
+$text-color: var(--text-color, #404040);
+$text-color-inverse: var(--text-color-inverse, #fff);
+$detail-color: $background-gray;
+
+$font-family: var(--font-family, "Segoe UI", SegoeUI, Arial, sans-serif);
+$font-family-secondary: var(--font-family-secondary, Raleway, Arial, sans-serif);
+$root-font-size: var(--root-font-size, 14px);
+
+@import "./table.scss";
+
+@mixin doubleArrow() {
+  display: inline-block;
+  background: transparent;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 10' style='enable-background:new 0 0 10 10;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23a0a0a0;%7D%0A%3C/style%3E%3Cpolygon class='st0' points='2,2 0,4 5,9 10,4 8,2 5,5 '/%3E%3C/svg%3E%0A"),
+    url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 10' style='enable-background:new 0 0 10 10;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23a0a0a0;%7D%0A%3C/style%3E%3Cpolygon class='st0' points='2,2 0,4 5,9 10,4 8,2 5,5 '/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 9px 100%;
+  background-position: left 0, left 5px;
+  height: 20px;
+  width: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.sa-tabulator__header {
+  padding: 20px 13px;
+  background-color: $background-gray;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  .sa-table__header-space {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .sa-table__entries {
+    float: none;
+    line-height: 34px;
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+.sa-tabulator__downloads-bar {
+  float: left;
+  .sa-table__btn {
+    margin-left: 10px;
+  }
+}
+
+.sa-tabulator__pagination-container {
+  float: right;
+  margin-top: 8px;
+  min-width: 200px;
+  text-align: right;
+}
+
+.sa-tabulator__filter-container {
+  margin-bottom: 20px;
+  input {
+    box-sizing: border-box;
+  }
+}
+
+//redefine tabulator's styles
+.sa-tabulator {
+  .tabulator-page {
+    margin-right: 15px;
+    padding: 1px;
+    vertical-align: middle;
+    color: $text-gray;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+
+  .tabulator-page[aria-label~="Prev"] {
+    @include arrow();
+    transform: rotate(90deg);
+    margin-right: 20px;
+  }
+
+  .tabulator-page[aria-label~="Next"] {
+    @include arrow();
+    transform: rotate(270deg);
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  .tabulator-page[aria-label~="First"] {
+    @include doubleArrow();
+    transform: rotate(90deg);
+    margin-right: 10px;
+  }
+
+  .tabulator-page[aria-label~="Last"] {
+    @include doubleArrow();
+    transform: rotate(270deg);
+    margin-left: 10px;
+  }
+
+  .tabulator-page.active {
+    font-weight: bold;
+    border-bottom: 1px solid $text-gray;
+  }
+
+  .tabulator {
+    border: 1px solid #ddd;
+    background-color: $background-color;
+
+    .tabulator-row .tabulator-cell {
+      padding: 20px;
+      border-top: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+    }
+
+    .tabulator-header .tabulator-col {
+      padding: 13px 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .tabulator-header .tabulator-col .tabulator-col-content {
+      padding: 0;
+    }
+
+    .tabulator-header {
+      border-bottom: none;
+    }
+
+    .tabulator-header .tabulator-col.tabulator-sortable:hover {
+      background-color: white;
+    }
+
+    .tabulator-header,
+    .tabulator-header .tabulator-col {
+      background-color: white;
+    }
+
+    .tabulator-header .tabulator-col:first-child {
+      pointer-events: none;
+    }
+
+    .tabulator-header .tabulator-col .tabulator-col-content .tabulator-arrow {
+      display: none;
+    }
+
+    .tabulator-row.tabulator-selectable:hover {
+      cursor: default;
+      background-color: $background-color;
+    }
+
+    .tabulator-row.tabulator-selectable.sa-table__detail-row:hover {
+      background-color: $detail-color;
+    }
+
+    .tabulator-row.tabulator-row-even {
+      background-color: $background-color;
+    }
+
+    .tabulator-header .tabulator-col .tabulator-col-content {
+      border-top: none;
+    }
+
+    .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
+      padding-right: 0;
+    }
+
+    .tabulator-tableHolder::-webkit-scrollbar {
+      height: 10px;
+      width: 10px;
+      background-color: $scroll-color;
+    }
+
+    .tabulator-tableHolder::-webkit-scrollbar-thumb {
+      background: $main-color;
+    }
+  }
+}

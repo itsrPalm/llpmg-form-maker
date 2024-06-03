@@ -1,0 +1,34 @@
+@import "globals";
+
+.sa-visualizer__toolbar {
+}
+
+.sa-visualizer__header {
+  font-family: $font-family-secondary;
+  font-size: $root-font-size;
+}
+
+.sa-visualizer__content {
+  font-family: $font-family;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sa-visualizer__footer {
+  margin-top: 10px;
+}
+
+.sa-visualizer__footer-title {
+  display: inline-block;
+  font-family: $font-family-secondary;
+  font-size: $root-font-size;
+  color: #404040;
+  line-height: 34px;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.sa-visualizer__footer-content {
+  margin-top: 10px;
+}

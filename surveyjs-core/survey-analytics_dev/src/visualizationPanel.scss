@@ -1,0 +1,254 @@
+@import "globals";
+
+.sa-panel__header {
+  margin: 0 1em;
+}
+
+.sa-grid {
+  position: relative;
+}
+
+.sa-grid__grid-sizer {
+  width: 100%;
+  box-sizing: border-box;
+  @media screen and (min-width: 1400px) {
+    width: 50%;
+  }
+}
+
+.sa-question {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 1em;
+}
+
+.sa-question-layouted {
+  position: absolute;
+
+  @media screen and (min-width: 1400px) {
+    width: calc(50% - 1px);
+  }
+}
+
+.sa-question__content {
+  background-color: $background-color;
+  padding: 20px;
+}
+
+.sa-question__title {
+  margin-left: 30px;
+  font-family: $font-family-secondary;
+  font-size: 18px;
+  font-weight: bold;
+  color: $text-color;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.sa-question__title--draggable {
+  cursor: move;
+  &:after {
+    content: " ";
+    display: block;
+    float: right;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg%3E%3Cpolygon style='fill: %231ab394' points='13,5 12,6 13,7 9,7 9,3 10,4 11,3 8,0 5,3 6,4 7,3 7,7 3,7 4,6 3,5 0,8 3,11 4,10 3,9 7,9 7,13 6,12 5,13 8,16 11,13 10,12 9,13 9,9 13,9 12,10 13,11 16,8 '/%3E%3C/g%3E%3C/svg%3E ");
+  }
+}
+
+.sa-toolbar {
+  font-family: $font-family;
+  font-size: $root-font-size;
+  color: $text-color;
+  line-height: 34px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sa-toolbar.sa-toolbar > * {
+  display: inline-flex;
+  line-height: 1em;
+}
+
+.sa-toolbar__button {
+  font-family: $font-family;
+  font-size: $root-font-size;
+  padding: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: $border-color;
+    background-blend-mode: darken;
+  }
+  margin: 0 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.sa-toolbar__svg-button {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+  use {
+    fill: $svg-color;
+  }
+  &:hover {
+    use {
+      fill: $svg-hover-color;
+    }
+  }
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.sa-toolbar__button--right {
+  float: right;
+}
+
+// custom select
+.sa-question__select-wrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 100px;
+  max-width: 300px;
+
+  .sa-question__select {
+    width: 100%;
+    display: block;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 2px;
+    background: $text-color-inverse;
+    border-color: $border-color;
+    height: $form-element-height;
+    padding: 5px 23px 5px 15px;
+    line-height: initial;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+
+    &:disabled {
+      color: $disabled-color;
+    }
+  }
+
+  &:before {
+    margin-top: -4px;
+    top: 50%;
+    right: 10px;
+    z-index: 1;
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-right: 2px solid $text-color;
+    border-bottom: 2px solid $text-color;
+    transform: rotate(45deg);
+    box-sizing: content-box;
+    pointer-events: none;
+  }
+}
+// EO custom select
+
+.sa-question__filter {
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.sa-question__filter-text {
+  vertical-align: middle;
+  margin-top: 1px;
+  line-height: 32px;
+}
+
+.sa-commercial {
+  font-size: 12px;
+  padding: 1em 0 0.5em 2em;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: $main-color;
+  }
+}
+.sa-commercial__text {
+  font-weight: bold;
+  text-decoration: none;
+  color: $main-color;
+}
+.sa-commercial__product {
+  padding-left: 0.5em;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"),
+    url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyCMIT5lu.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"),
+    url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ITw.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"),
+    url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwJYtWqhPAMif.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"),
+    url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwJYtWqZPAA.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}

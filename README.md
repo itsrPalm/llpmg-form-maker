@@ -16,7 +16,7 @@ npm i
 npm run dev
 ```
 
-Open https://llpmg-form-maker.clinicviews.com/ in your web browser.
+Open http://localhost:3000/ in your web browser.
 
 ## Template structure
 
